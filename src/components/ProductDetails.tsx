@@ -187,9 +187,10 @@ ${directImageLink ? `\n🔗 *رابط صورة الصنف:* ${directImageLink}` 
 
     // Fallback: Direct WhatsApp Link
     const cleanPhone = storePhone.replace(/[+\s-]/g, '');
-    const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(messageText)}`;
-    window.open(waUrl, '_blank');
+    const waUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(messageText)}`;
+    window.location.href = waUrl;
   };
+
 
   const handlePropertySelect = (propName: string, option: string) => {
     setSelectedProperties(prev => ({
