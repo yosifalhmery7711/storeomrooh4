@@ -139,10 +139,7 @@ export default function HomeTab({
     <div className="bg-amber-50/20 dark:bg-gray-950 min-h-screen pb-32 pt-5">
       <div className="max-w-md mx-auto px-4 space-y-6">
         
-        {/* Promotional PWA & APK Installation Banner */}
-        {!isAndroidAppInstalled && (
-          
-        )}
+      
         
         {/* Sliding Banners Carousel */}
         {allSlides.length > 0 && (
