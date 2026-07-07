@@ -241,12 +241,9 @@ export default function InstallPromptModal({ deferredPrompt, onInstallSuccess }:
               {/* Actions Section */}
               
                 ) : (
-                  /* Standard Android / Chrome / PC / Mac layout with a direct, single install button */
+                  
                   <div className="space-y-4 text-right">
-                    {/* Direct Install Button */}
                     
-
-                    {/* Direct Android APK Download Button */}
                     <button
                       onClick={() => {
                         const adminSettingsObj = Database.getAdminSettings();
