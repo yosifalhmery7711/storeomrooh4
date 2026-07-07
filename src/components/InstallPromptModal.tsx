@@ -277,15 +277,7 @@ export default function InstallPromptModal({ deferredPrompt, onInstallSuccess }:
 
                     {/* Helpful tips and warnings shown elegantly beneath the button (never blocking it) */}
                     {isIframe && (
-                      <div className="bg-amber-500/5 border border-amber-500/10 rounded-xl p-3 text-xs text-amber-950 dark:text-amber-200">
-                        <p className="font-bold flex items-center gap-1">
-                          <AlertCircle className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
-                          <span>تنبيه بخصوص إطار المعاينة:</span>
-                        </p>
-                        <p className="mt-1 text-[11px] leading-relaxed text-gray-500 dark:text-gray-400">
-                          المتصفحات تمنع التثبيت التلقائي من داخل لوحة المعاينة (iframe). يُفضل فتح الرابط المباشر للمتجر في نافذة خارجية مستقلة لتثبيته بنقرة واحدة.
-                        </p>
-                      </div>
+                      
                     )}
 
                     {showManualStepsFallback && (
@@ -315,58 +307,7 @@ export default function InstallPromptModal({ deferredPrompt, onInstallSuccess }:
                     
                 
                   {showDiagnostics && (
-                    <div className="mt-2 text-right bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-3 text-[11px] font-mono space-y-1.5 text-gray-600 dark:text-gray-400">
-                      <div className="flex justify-between items-center border-b border-gray-100 dark:border-gray-800 pb-1">
-                        <span className="font-sans font-bold text-gray-700 dark:text-gray-300">الخاصية الفنية</span>
-                        <span className="font-sans font-bold text-gray-700 dark:text-gray-300">الحالة</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-500 dark:text-gray-500">HTTPS / بيئة آمنة</span>
-                        <span className={isSecure ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                          {isSecure ? "نشط ✓" : "غير مدعوم ✗"}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-500 dark:text-gray-500">Service Worker مدعوم</span>
-                        <span className={hasSW ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                          {hasSW ? "مدعوم ✓" : "غير مدعوم ✗"}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-500 dark:text-gray-500">Service Worker مسجّل</span>
-                        <span className={swActive ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                          {swActive ? "مسجّل ✓" : "غير مسجّل ✗"}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-500 dark:text-gray-500">معاينة داخل إطار (Iframe)</span>
-                        <span className={isIframe ? "text-amber-500 font-bold" : "text-green-500 font-bold"}>
-                          {isIframe ? "نعم (معطل) ✗" : "لا (مباشر) ✓"}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-500 dark:text-gray-500">حدث التثبيت الجاهز</span>
-                        <span className={localDeferredPrompt ? "text-green-500 font-bold" : "text-amber-500 font-bold"}>
-                          {localDeferredPrompt ? "جاهز ✓" : "غير جاهز يدوياً فقط"}
-                        </span>
-                      </div>
-                      {diagnosticLogs.length > 0 && (
-                        <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                          <p className="font-sans font-bold text-gray-700 dark:text-gray-300 mb-1">سجل التفاعل الأخير:</p>
-                          <ul className="list-disc list-inside space-y-1 text-[10px] text-gray-500 dark:text-gray-400">
-                            {diagnosticLogs.map((log, idx) => (
-                              <li key={idx} className="leading-relaxed">{log}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+                    
       )}
     </AnimatePresence>
   );
