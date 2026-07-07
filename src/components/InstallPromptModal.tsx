@@ -266,17 +266,7 @@ export default function InstallPromptModal({ deferredPrompt, onInstallSuccess }:
                     </button>
 
                     {/* Helpful tips and warnings shown elegantly beneath the button (never blocking it) */}
-                    {isIframe && (
-                      
-                    )}
-
-                    {showManualStepsFallback && (
-                      
-                    )}
-
-                    {!localDeferredPrompt && !showManualStepsFallback && (
-                      
-                )}
+                    
 
                 {/* Continue in Browser Button */}
                 <button
