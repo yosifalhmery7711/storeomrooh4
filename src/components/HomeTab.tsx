@@ -141,27 +141,7 @@ export default function HomeTab({
         
         {/* Promotional PWA & APK Installation Banner */}
         {!isAndroidAppInstalled && (
-          <div className="bg-gradient-to-l from-amber-500/10 to-amber-600/15 border border-amber-500/20 rounded-[26px] p-4 text-right relative overflow-hidden flex flex-col justify-between items-center gap-3.5 shadow-sm">
-            <div className="absolute top-0 left-0 w-24 h-24 bg-amber-500/5 rounded-full blur-xl pointer-events-none" />
-            <div className="flex items-center gap-3 w-full">
-              <div className="w-11 h-11 bg-gradient-to-tr from-amber-400 to-amber-500 rounded-2xl flex items-center justify-center shadow-md text-2xl shrink-0">
-                🌸
-              </div>
-              <div>
-                <h4 className="text-xs font-black text-amber-950 dark:text-amber-300">ثبّتي تطبيق متجر أم روح على جوالكِ! 📱</h4>
-                <p className="text-[10px] text-gray-500 mt-0.5 leading-relaxed">تسوق فوري وسلس، مع تصفح سريع وموفر لبيانات الإنترنت.</p>
-              </div>
-            </div>
-            
-            <button
-              onClick={() => {
-                window.dispatchEvent(new CustomEvent('trigger-install-prompt-modal'));
-              }}
-              className="w-full bg-amber-500 hover:bg-amber-600 text-white font-black text-[10px] py-2.5 px-4 rounded-xl transition shadow-md active:scale-95 shrink-0 cursor-pointer text-center"
-            >
-              تحميل وتثبيت التطبيق 🌸
-            </button>
-          </div>
+          
         )}
         
         {/* Sliding Banners Carousel */}
