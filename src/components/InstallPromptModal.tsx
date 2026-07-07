@@ -238,9 +238,9 @@ export default function InstallPromptModal({ deferredPrompt, onInstallSuccess }:
                 </div>
               </div>
 
-              {/* Actions Section */}
+            
               
-                ) : (
+                
                   
                   <div className="space-y-4 text-right">
                     
